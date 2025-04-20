@@ -1,0 +1,33 @@
+@charset "UTF-8";
+body {
+  background-color: #000000;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+}
+
+div {
+  background-color: #ff00003a;
+  padding: 20px;
+  border-radius: 20px;
+  height: 100px;
+  width: 100px;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px #ffffff7a;
+  text-align: center;
+  display: inline-block;
+}
+div:hover {
+  background-color: aqua;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+.especial::after {
+  content: "[LINK]";
+  color: #25252965;
+  font-size: 10px;
+}

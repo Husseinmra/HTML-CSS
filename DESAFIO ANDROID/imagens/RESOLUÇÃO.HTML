@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RESOLUÇÃO</title>
+</head>
+<body>
+  <H1>
+    RESOLUÇÃO DO EXERCÍCIO
+  </H1>
+
+  <P>
+    Pirmeiro passo é o planejamento do site, principalmente a diagramação. Para isso, posso usar alguns sites para fazer MOCK UP, como por exemplo o <a href="https://app.mockflow.com/">MOCKFLOW</a>
+  </P>
+
+  <h2>
+    ERROS:
+  </h2>
+  <p>
+    Divisão do site é dentro de Main, todo o conteudo é dentro de Article e a parte de quer aprender mais é um conteúdo extra, então ficará dentro de um ASIDE.
+  </p>
+
+  <P>
+    Eu jogo todo o texto e depois vou envelopando cada parte com sua respectiva hierarquia, se é H1, h2, p, listas e etc.
+  </P>
+
+  <p>
+    Faltou fazer as abreviações na lista usando a tag abbr.
+  </p>
+
+  <p>
+    o Professor ensinou sobre uma maneira global de mexer no CSS através do :root e dentro dele definir as variaveis com (--), assim posso usar essas variaveis em qualquer lugar do CSS, por exemplo:
+    :root {
+      --cor1: #000000;
+      --cor2: #FFFFFF;
+      --cor3: #FF0000;
+      --cor4: #00FF00;
+    } <br>
+    Então, quando eu for definir uma cor para o meu título, por exemplo, eu posso usar a variavel assim: <br>
+    h1 {
+      color: var(--cor1);
+    } <br>
+    Essa cor estará disponível no final da lista de cores também.
+  </p>
+  <p>
+    Esse mesmo raciocínio eu posso usar para as fontes também. Exemplo:
+    Criar um root com as fontes que eu quero usar e depois usar a variavel para definir a fonte em cada parte do site. <br>
+    Então dentro do colchete do Root já criado, embaixo das variaveis de cores eu posso definir (--) e o nome da fonte que eu quero exemplo:
+    --font1: 'Special Gothic', sans-serif; <br>
+    --font2: 'Special Gothic Condensed', sans-serif; <br>
+    e etc.
+    Não posso me esquecer de importar embedando a fonte do Google fonts no CSS ou no HTML e fontface para fontes locais. <br>
+  </p>
+
+  <p>
+    Importante também definir um regra global usando *{} e dizer que nada terá padding (0px) e margin (0px), assim não terei problemas com espaçamentos. <br>
+    Posso também, abrir o devtools e mexer no espaçamento do site e ele irá mostrar quantos pixels tem enquanto mexo, podendo definir assim um mínimo e uma máximo que fique confortável na leitura.
+  </p>
+
+  <p>
+    No meu Main, além de definir o minimo e o maximo width, faltou pedir que ele sempre centralize no meio da tela mesmo que reproduza em telas maiores usando o margin auto.
+  </p>
+
+  <p>
+    Sempre tenho que me atentar para a responsividade do site, definindo o tamanho não so do texto principal (main), mas também de imagens e vídeos, para isso, no caso de imagens eu posso carregar a imagem padrão e uma versão dela menor para dispositivos móveis. Vou envelopar a imagem padrao com picture e criar um source media, definindo um ponto maximo onde eu quero que a imagem comece a diminuir.
+  </p>
+
+  <p>
+    Faltou definir uma altura minima para o cabeçalho caso ele seja exibido em outras telas.
+  </p>
+  <p>
+    ainda no hover do nav, além de todas as características que eu defini eu posso definir um transition duration para dar uma animação ao passar o mouse por cima.
+  </p>
+  <p>
+    Posso também adicionar um line height para definir um espaçamento pequeno entre as linhas do parágrafo.
+  </p>
+
+  <p>
+    na parte do quer aprender mais eu deveria ter feito em lista e definir lis style inside para as bolinhas de marcação ficarem para dentro da caixa e dividir em duas colunas  colums 2
+    Posso tambem definir o LIST STYLE TYPE para colocar um ícone na frente da lista. Emojis disponiceis em  <a href="https://emojipedia.org/">EMOJIPEDIA </a>, copiar o codigo dele no fim da pagina sem o U+ e na hora de inserir eu coloco um (\) ao contrário. Se eu quero espaçar eu uso (00A0) ou antes ou depois da barra. <br>
+  </p>
+  <P>
+    Posso usar tambem margens negativas para preencher espaços de cores quando eu não tiver como preencher com padding, por exemplo, se eu tiver uma imagem e quiser que a cor de fundo preencha o espaço entre a imagem e o texto, posso usar uma margem negativa para isso. <br>
+  </P>
+</body>
+</html>

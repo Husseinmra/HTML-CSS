@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIPOGRAFIA</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>TUDO SOBRE TIPOGRAFIAS</h1>
+    <h2>Anatomia dos tipos /* tipo é letra */</h2>
+    <p>
+      As partes de uma letra são chamadas de anatomia. Cada parte tem um nome
+      específico, e entender esses termos é fundamental para a tipografia.
+    </p>
+    <p>
+      o X é o ponto de partida para a criação de todas as letras. Dessa forma a
+      altura das letras se chama altura X
+    </p>
+    <p>Resumo a seguir:</p>
+    <img
+      src="IMAGENS/fontes.png"
+      alt="print de fontes"
+      width="500"
+      height="300"
+    />
+    <p>
+      Outras caracteíristicas da letra como haste, filete, esporão e afins podem
+      ser encontradas no resumo a seguir:
+    </p>
+    <img src="IMAGENS/fontes2.png" alt="print2" width="500" height="300" />
+    <br />
+    <br />
+    <img src="IMAGENS/fontes3.png" alt="print3" width="500" height="300" />
+    <p>Glifos são as letras e o conjunto delas formam a fonte.</p>
+    <p>
+      As fontes são divididas em serifadas e sem serifa. As serifas são as
+      pequenas extensões que aparecem nas extremidades das letras. As fontes sem
+      serifa não possuem essas extensões.
+    </p>
+    <p>
+      As fontes também podem ser classificadas em diferentes estilos, como
+      sans-serif, serif, script, display, entre outros. Cada estilo tem suas
+      próprias características e é utilizado para diferentes propósitos.
+    </p>
+    <h3>CATEGORIA DE FONTES</h3>
+    <ul>
+      <li>Serifadas</li>
+      <li>sem serifas (Sans-serif)</li>
+      <li>
+        monoespaçada (com ou sem serfia) ou seja, todas as letras tem a mesma
+        largura e ocupam mais espaço
+      </li>
+      <li>handwriting (fonte scriptada) simula a a caligrafia</li>
+      <li>fontes display (nao tem regras exibidas a cima)</li>
+    </ul>
+    <h4>DICAS</h4>
+    <p>
+      Usar textos longos sem serifas, papel impresso com serifas, usar cores
+      contrastantes (complementares) para facilitar a leitura do site. 
+    </p>
+    <p>Quando eu digito uma fonte, ele me dá safe combinations, ou seja, a primeira que aparece é a que ele vai tentar, se nao tiver essa fonte no dispositivo ele tentará a procima e assim por diante.</p>
+    <p>Se eu quiser saber quais fontes são correlatas posso entrar neste <a href="https://www.w3schools.com/cssref/css_websafe_fonts.php" target="_blank">site</a></p>
+
+    <h3>Medidas Absolutas e relativas do tamanho das fontes</h3>
+    <p>
+      cm, mm, in, px, pt, pc
+      <ul> Absolutas
+        <li>cm: centímetros</li>
+        <li>mm: milímetros</li>
+        <li>in: polegadas</li>
+        <li>px: pixels</li>
+        <li>pt: pontos (1/72 polegada)</li>
+        <li>pc: picas (1/6 polegada)</li>
+    </p>
+    <ul>
+ Relativas
+      <li>em: unidade relativa à fonte do elemento pai</li>
+      <li>rem: unidade relativa à fonte do elemento raiz</li>
+      <li>vw: unidade relativa à largura da janela de visualização</li>
+      <li>vh: unidade relativa à altura da janela de visualização</li>
+    </ul>
+    <p>
+      recomendação é usar PX para fixa e EM para relativa.
+      16 pixels é o padrão de tamanho de fonte em navegadores, então 1em = 16px.
+    </p>
+    <p>
+      quando eu for pensar em peso da fonte posso usar dentro do style o font weight podendo definir entre:
+    </p>
+    <ul>
+      <li>100: Thin</li>
+      <li>200: Extra Light</li>
+      <li>300: Light</li>
+      <li>400: Regular</li>
+      <li>500: Medium</li>
+      <li>600: Semi Bold</li>
+      <li>700: Bold</li>
+      <li>800: Extra Bold</li>
+      <li>900: Black</li>
+    </ul>
+      ou
+    <ul>
+      <li>lighter</li>
+      <li>normal</li>
+      <li>bold</li>
+      <li>bolder</li>
+    </ul>
+    <p>
+      pensando em estilo de fonte eu posso usar o font style e definindo entre:
+    </p>
+    <ul>
+      <li>normal</li>
+      <li>italic</li>
+      <li>oblique</li>
+    </ul>
+    <p>
+      <H3>
+      FONT-SHORTHAND
+      </H3>
+      posso então no meu style definir diversos parâmetros para fonte como font family, font size, font weight e font style. Porém, para fazer isso de maneira mais resumida eu posso usar o font shorthand, que é uma forma de definir todas essas propriedades em uma única linha. A sintaxe é a seguinte: style, weight, size e family. Exemplo: font: italic bold 16px Arial, sans-serif.
+    </p>
+    <H3>
+      GOOGLE FONTES
+    </H3>
+    <p>
+      para usar fontes da internet (precisa estar conectado), posso usar o <a href="https://fonts.google.com/" target="_blank">Google Fontes</a>. Lá eu posso escolher e filtrar as fontes e importar elas para estilo em CSS. Clicar em EMBED, import e colar ela dentro do STYLE e fora de qualquer seletor. Em seguida, dentro do seletor que eu criar eu posso colocar o nome dela entre aspas. Exemplo: font-family: 'Roboto', sans-serif.
+      Exemplo na aba CSS
+    </p>
+    <h3>
+      DAFONT
+    </h3>
+    <p>
+      para baixar fontes, posso usar o <a href="https://www.dafont.com/" target="_blank">Dafont</a>. Lá eu posso escolher e filtrar as fontes e baixar elas para o meu computador. Depois disso, eu posso instalar a fonte no meu computador e usar ela normalmente em qualquer programa que suporte fontes personalizadas.
+      Devo prestar atenção se contem todos os Glifos, maiúsculo e minúsculo, inclusive com os acentos.
+    </p>
+    <p>
+      para usar fontes de outro site, baixo elas, coloco na pasta do projeto (otf, ttf ou outro formato) e coloco uma tag @font-face no meu CSS. Nesta tag, no campo URL eu escrevo entre aspas o nome exato do arquivo com a extensão e no format eu escrevo o tipo de formato daquele arquivo. Exemplo: @font-face { font-family: 'Nome da Fonte'; src: url('nome-da-fonte.ttf') format('truetype'); }. (exemplo na aba css)
+      Posso adicionar mais de um arquivo, com virgula e repetindo as mesmas propriedades em seguida.
+      <br>
+
+      <ul>TIPOS DE FORMATOS
+        <li>truetype (ttf)</li>
+        <li>apple advanced typography (aat)</li>
+        <li>opentype (otf)</li>
+        <li>woff (web open font format)</li>
+        <li>woff2 (web open font format 2)</li>
+        <li>svg (scalable vector graphics)</li>
+      </ul>
+    </p>
+    <h5>
+      OLÁ, MUNDO! TESTANDO FONTE
+    </h5>
+    <H3>
+      Descobrindo fontes de sites
+    </H3>
+    <p>
+      Posso usar o plugin do chrome chamado <strong>font ninja</strong> e descobrir tudo sobre aquela fonte, como nome, tamanho, peso e estilo. Além disso, posso baixar a fonte e usar ela no meu computador com o serviço pago. Esse plugin nao funciona pra fontes dentro de imagens.
+    </p>
+    <H3>
+      Descobrindo fontes de fotos
+    </H3>
+    <p>
+      Posso usar os seguintes sites para descobrir:
+      
+      <ul>
+        <li><a href="https://www.whatfontis.com/" target="_blank">WHATFONTIS</a></li>
+        <li><a href="https://www.fontsquirrel.com/" target="_blank">FONTSQUIRREL</a></li> 
+        <li><a href="https://www.myfonts.com/?srsltid=AfmBOor6MGzLj8FbKBRDHQlrWa1Rct1Bk1h9H-Oc52gvbnB-_1CWp7SZ" target="_blank">MYFONT</a></li>
+      </ul>
+    </p>
+
+    <h3>
+ALINHAMENTO
+    </h3>
+    <P>
+      Para mudar posições do texto eu uso o text allign e posso definir entre:
+      <ul>
+        <li>left</li>
+        <li>right</li>
+        <li>center</li>
+        <li>justify</li>  
+        <p>
+          posso ainda usar o text indent para definir o recuo (parágrafo) do texto, o line height para definir o espaçamento entre linhas e o letter spacing para definir o espaçamento entre letras.
+        </p>
+    </P>
+  </body>
+</html>

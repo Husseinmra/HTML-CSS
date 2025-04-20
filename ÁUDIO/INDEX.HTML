@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIDIAS</title>
+</head>
+<body>
+  <H1>ABRINDO MÍDIAS DE DIFERENTES TAMANHOS</H1>
+  <P>Tente abrir estas mídias em diferentes dispositivos</P>
+  <picture>
+    <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+    <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+    <img src="IMAGENS/FOTO-G.png" alt="foto grande">
+  </picture>
+  <p>Então, quando eu quiser carregar multiplas imagens de acordo com a largura do dispositivo, eu crio a tag picture e defino um MAX WIDTH (mudar a tag original) e defino os PIXELS de forma hierarquica. Do menor para o maior. Devo antes carregar uma imagem  que eu quero que abra usando a tag img normalmente (usar a maior versão).</p>
+    <h1>ÁUDIOS</h1>
+  <p>Vamos tentar reproduzir áudios</p>
+  <audio controls preload="metadata">
+    
+    <source src="MIDIA/Simpin On You - The Soundlings.mp3" type="audio/mpeg">
+    <P>Infelizmente seu navegador não pode reproduzir. <a href="MIDIA/Simpin On You - The Soundlings.mp3">Clique aqui</a> para baixar o áudio.</P>
+   
+  </audio>
+  <p>Então, eu crio a tag audio e dentro dela posso colocar parâmetros como preload e definir se o site so irá carregar quando carregar todo o site - auto - (evitar), ou carregar infos básicas com o metadata e none que só irá carregar quando o leitor clicar para reproduizr. O controls é para que o usuário possa controlar a reprodução.Posso usar o auto play e o loop também.
+     Se o navegador não conseguir reproduzir, eu posso criar um link para o arquivo.</p>
+  <p>Lembrando que eu posso usar o mp3 (type será mpeg), posso usar o ogg (type será ogg) e posso usar o WAV (evitar por ser muito pesado)</p>
+  <p>Posso tambem criar outras linhas de source src em diferentes formatos, de forma hierarquica, para que o site tente carregar o mesmo arquivo em diferentes formatos sucessivamente.</p>
+  
+</body>
+</html>

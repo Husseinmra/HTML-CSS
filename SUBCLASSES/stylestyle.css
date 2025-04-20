@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+body {
+  background-color: #000000;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+}
+div:hover {
+  color: tomato ;
+}
+div > p {
+  display: none;
+}
+div:hover > p {
+  display: block;
+  color: blue;
+  font-size: 20px;
+  font-weight: bold;
+} 
