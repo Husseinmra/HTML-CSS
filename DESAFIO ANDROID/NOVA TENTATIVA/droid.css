@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "droid";
+  src: url("../fontes/idroid.otf" ) format("opentype");
+  font-weight: normal;      
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --cor1: #000000;
+  --cor2: #FFFFFF; 
+  --cor3: #FF0000;
+  --cor4: #00FF00;
+  --cor5: #0000FF;
+
+  --fontdroid: "droid", sans-serif;
+  --fonttexto: "Arial", sans-serif;
+}
