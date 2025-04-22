@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posicionamentos</title>
+</head>
+<body>
+  <H1>Posicionamento de fundo</H1>
+    <p>
+      Sobre as imagens de fundo, eu posso usar no url uma imagem local ou ate mesmo um url da internet.
+      <br>
+      Por padrão a imagem de fundo se repete, mas eu posso usar o background-repeat: no-repeat; para que a imagem não se repita.
+    </p>
+    <br>
+    <p>
+      posso usar background size para definir o tamanho da imagem de fundo.
+      <br>
+      posso definir o repeat x ou y para repetir a imagem apenas na horizontal ou vertical.
+    </p>
+    <br>
+    <p>
+      quando defino o background position, eu defino a posição da imagem de fundo. Defino um ponto de ancoragem, e a imagem se posiciona em relação a esse ponto.
+      <br>
+      As opções de ancoragem são: top, bottom, left, right, center.
+    </p>
+    <br>
+    <p>Importante que no body eu devo definir o view height para que a imagem de fundo ocupe toda a tela. geralmente eu uso 100vh, mas posso usar 100% também. (97vh é uma boa medida)</p>
+    <br>
+    <p>No backgorund size eu posso tentar algumas opções como cover, contain, auto, e também posso definir um tamanho específico em px ou %. o Contain faz com que a imagem se ajuste ao tamanho do elemento, enquanto o cover faz com que a imagem cubra todo o elemento, mesmo que parte dela fique cortada.</p>
+    <br>
+    <p>Uma dica é mesmo que o fundo seja uma imagem, que eu configure uma cor para caso demore pra carregar o usuário não fique com uma tela em branco.</p>
+    <br>  
+    <p>É bom evitar porcentagens porque ela ira distorcer a imagem.</p>
+    <br>
+    <p>Outra dica é usar o background-attachment: fixed; para que a imagem de fundo fique fixa e não se mova quando o usuário rolar a página.</p>
+    <br>  
+    <p>Se eu quiser usar uma shorthand eu devo colocar em ordem background: [background-color] [background-image] [background-repeat] [background-position] [background-size] [background-attachment]; e o background-color é opcional.</p>
+    <br>
+    <p>
+      Quando eu quero posicionar um elemento exatamente no meio da pagina eu vou precisar criar uma div para centralizar o elemento desejado que estara dentro de outra div semântica como por exemplo uma section e dentro dela centralizar um article.
+      Entao eu defino o section com a div container e o article com a div conteudo.
+      Em seguida, eu crio um posicionamento relativo para a seção e para o conteudo eu defino absoluto para que eu possa trabalhar ocm top e left. Em seguida eu defino 50% para as duas medidas, porém ele irá considerar o ponto esquerdo e em cima como base, nao centralizando como eu quero, para consertar eu defino outro parâmetro chamado transform e em seguida translate e defino valores de -50% e -50%, OU eu defino o section com display: flex; e justify-content: center; e align-items: center; para centralizar o elemento na horizontal e vertical. E no article eu defino um tamanho fixo para que ele fique centralizado.
+    </p>
+  
+  
+</body>
+</html>
