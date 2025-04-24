@@ -103,9 +103,15 @@
     Então, quando falo em criação de tabelas, eu tenho os seguintes elementos:
     <ul>
       <li>table</li>
-      <li>tr</li>
+      <li>Coulgroup</li>
+      <li>col</li>
+      <li>caption</li>
+      <li>thead</li>
       <li>th</li>
+      <li>tbody</li>
+      <li>tr</li>
       <li>td</li>
+      <li>tfoot</li>
     </ul>
     <p>O elemento table é o elemento pai, ou seja, o elemento que vai conter todos os outros elementos. <br>
     O elemento tr (rows) é o elemento que vai conter as linhas da tabela. <br>
@@ -114,7 +120,7 @@
     Preciso obedecer a hierarquia, onde um elemento fica dentro do outro.
    </p>
 
-<h2> criando linhas </h2>
+<h2> Criando Linhas </h2>
    <p>
     Para criar as linhas da tabela, eu faço um estilo no TD e crio um border, formando uma caixa em volta de cada conteudo de cada Table Data. <br>
     Em seguida, se eu quiser que as linhas estejam coladas eu uso o border-collapse: collapse; <br>
@@ -184,9 +190,17 @@
    </p>
 
    <h2>Destacando colunas</h2>
-   Se eu quiser destacar uma coluna inteira eu poderia definir o mesmo class para todos os elementos dessa coluna, porém se ela for muito grande eu posso fazer isso de uma vez só usando o COLGROUP. <br>
-   Para utilizá-lo eu abro a tag coulgroup e dentro dela coloco a tag col, sendo que cada col que eu colocar dentro do colgroup vai representar uma coluna da minha tabela respectivamente. <br>
-   Devo me lembrar de atribuir ao título da tabela (th) o Scope col para que formate todos os elementos embaixo dele. Dentro de cada Col eu defino um Class e no meu style personalizo esse Class.
+   <p>
+     Se eu quiser destacar uma coluna inteira eu poderia definir o mesmo class para todos os elementos dessa coluna, porém se ela for muito grande eu posso fazer isso de uma vez só usando o COLGROUP. <br>
+     Para utilizá-lo eu abro a tag coulgroup e dentro dela coloco a tag col, sendo que cada col que eu colocar dentro do colgroup vai representar uma coluna da minha tabela respectivamente. <br>
+     Dentro de cada Col eu defino um Class para destacar o estilo e no meu style personalizo esse Class.
+     Devo me lembrar de atribuir ao título de cada coluna (th) o elemento Scope: col para que formate todos os elementos embaixo dele. 
+   </p>
+
+   <h2> Responsividade</h2>
+   <p>
+    Para que eu crie uma barra de rolagem SOMENTE na tabela, eu envelopo ela em uma div e coloco um overflow pra tabela inteira (de table ate /table) e no style eu defino um overflow- x(Eixo x) de auto. Ou seja, quando a tela começar a espremer a tabela, será criada uma barra de rolagem somente na tabela, deixando o restante do conteúdo do site intacto. Ver <a href="desafio4.html">Desafio 4</a><br>
+   </p>
 
    <h2>
     EXEMPLO DE TABELA 1
