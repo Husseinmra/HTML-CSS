@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabelas</title>
+
+  <STYle>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    td {
+      border: 1px solid black;
+      padding: 10px;
+      width: 100px;
+    }
+    table {
+      border-collapse: collapse;
+    }
+  </STYle>
+</head>
+<body>
+  <h1>
+    Tudo sobre Tabelas
+  </h1>
+   <p>
+    Então, quando falo em criação de tabelas, eu tenho os seguintes elementos:
+    <ul>
+      <li>table</li>
+      <li>tr</li>
+      <li>th</li>
+      <li>td</li>
+    </ul>
+    <p>O elemento table é o elemento pai, ou seja, o elemento que vai conter todos os outros elementos. <br>
+    O elemento tr (rows) é o elemento que vai conter as linhas da tabela. <br>
+    O elemento th (head) é o elemento que vai conter os cabeçalhos da tabela. <br>
+    O elemento td (data) é o elemento que vai conter os dados da tabela. <br>
+    Preciso obedecer a hierarquia, onde um elemento fica dentro do outro.
+   </p>
+
+   <p>
+    Para criar as linhas da tabela, eu faço um estilo no TD e crio um border, formando uma caixa em volta de cada conteudo de cada Table Data. <br>
+    Em seguida, se eu quiser que as linhas estejam coladas eu uso o border-collapse: collapse; <br>
+    E se eu quiser que as linhas estejam separadas, eu uso o border-collapse: separate; <br>
+   </p>
+   <p>
+    Posso usar classes para estilizar as tabelas. <br>
+    Posso usar o text allign para alinhar o texto dentro do elemento. <br>
+    Posso usar o vertical allign para alinhar o texto dentro do elemento. <br>
+   </p>
+
+   <h2>
+    EXEMPLO DE TABELA
+   </h2>
+
+   <Table>
+     <tr>
+       <td>A1</td>
+       <td>B2</td>
+       <td>C3</td>
+     </tr>
+     <tr>
+      <td>A1</td>
+      <td>B2</td>
+      <td>C3</td>
+    </tr>
+    <tr>
+      <td>A1</td>
+      <td>B2</td>
+      <td>C3</td>
+    </tr>
+   </Table>
+</body>
+</html>
