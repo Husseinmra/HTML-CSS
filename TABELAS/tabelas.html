@@ -10,12 +10,87 @@
       font-family: Arial, sans-serif;
     }
     td {
-      border: 1px solid black;
+      border: 1px solid rgb(0, 0, 0);
       padding: 10px;
       width: 100px;
     }
     table {
       border-collapse: collapse;
+      
+    }
+
+    table.estados{
+      width: 500px;
+      padding: 10px;
+      border-collapse: collapse;
+      font-weight: bolder;
+      position: relative;
+      table-layout: fixed;
+      }
+
+      table.estados caption{
+        font-size: 1.3em;
+        font-weight: bolder;
+        background-color: rgba(151, 151, 67, 0.329);
+        color: #000000;
+        padding: 10px;
+        text-align: center;
+        border: 2px solid black;
+      }
+
+      table.estados thead{
+        position: sticky;
+        top: 0;
+      }
+
+    table.estados th {
+      background-color: #000000cb;
+      color: #f2f2f2;
+      padding: 10px;
+      border: 2px solid black;
+    }
+
+    table.estados tr:nth-child(even) {
+      background-color: #0000006e;
+    }
+  
+    table.estados td{ 
+      text-align: center;
+      vertical-align: middle;
+      border: 2px solid black;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    } 
+
+    table.estados .num{
+      text-align: right;
+
+    }
+
+    table.estados tfoot{
+      background-color: #000000;
+      color: #f2f2f2;
+      text-align: center;
+      vertical-align: middle;
+
+    }
+
+    table.span{
+      border-collapse: collapse;
+      width: 300px;
+      
+    }
+    table.span caption {
+      background-color: black;
+      color: #f2f2f2;
+      text-align: center;
+      font-size: 1.3em;
+      font-weight: bolder;
+      padding: 20px;
+
+    }
+    table.span td{
+      border: 1px solid rgb(0, 0, 0);
+      text-align: center;
     }
   </STYle>
 </head>
@@ -23,6 +98,7 @@
   <h1>
     Tudo sobre Tabelas
   </h1>
+  <h2> Elementos da tabela </h2>
    <p>
     Então, quando falo em criação de tabelas, eu tenho os seguintes elementos:
     <ul>
@@ -38,19 +114,82 @@
     Preciso obedecer a hierarquia, onde um elemento fica dentro do outro.
    </p>
 
+<h2> criando linhas </h2>
    <p>
     Para criar as linhas da tabela, eu faço um estilo no TD e crio um border, formando uma caixa em volta de cada conteudo de cada Table Data. <br>
     Em seguida, se eu quiser que as linhas estejam coladas eu uso o border-collapse: collapse; <br>
     E se eu quiser que as linhas estejam separadas, eu uso o border-collapse: separate; <br>
    </p>
+
+   <h2> Alinhando conteúdo </h2>
    <p>
     Posso usar classes para estilizar as tabelas. <br>
     Posso usar o text allign para alinhar o texto dentro do elemento. <br>
     Posso usar o vertical allign para alinhar o texto dentro do elemento. <br>
    </p>
 
+   <h2> Estrutura de tabelas maiores </h2>
+   <P>
+    Para estruturar uma tabela maior eu posso usar o THEAD, TFOOT e TBODY. <br>
+    O THEAD é o cabeçalho da tabela, onde eu coloco os títulos das colunas. <br>
+    O TFOOT é o rodapé da tabela, onde eu coloco os totais. <br>
+    O TBODY é o corpo da tabela, onde eu coloco os dados. <br>
+    Eu posso ter dentro de cada um desses elementos, o TR, TH e TD. <br>
+    O THEAD e o TFOOT são opcionais, mas o TBODY é obrigatório. <br>
+    Lembrando que tudo deve estar dentro da tag TABLE.
+   </P>
+   <p>
+    Posso usar tambem o CAPTION para dar um título a minha tabela
+   </p>
+
+   <h2> Scope e semântica </h2>
+   <p>
+    Semanticamente, para dizer que um conteúdo faz parte de uma determinada linha atrelada a um título eu uso o SCOPE. <br> 
+    Então, no caso da TABELA 2, eu tenho ESTADO como um titulo da COLUNA de todos os 27 estados do Brasil. Nesse caso, eu uso então SCOPE: COL no ESTADO. <br>
+    No título POPULAÇÃO os conteúdos também estão em uma coluna abaixo dele então eu uso SCOPE: COL. <br>
+    Já no FOOT eu tenho que TOTAL DE HABITANTES é um número que se encontra ao seu lado, ou seja, na mesma linha, logo eu uso o SCOPE: ROW. <br>
+    O SCOPE é um atributo que eu coloco dentro de títulos (TH) e seus resultados, e ele pode ser COL ou ROW. <br>
+   </p>
+   <p>
+    Se meu titulo tiver sobre ele ou ao seu lado, mais de uma linha eu uso scope: colgroup e rowgroup respectivamente
+   </p>
+   <p>
+    Importante ressaltar que o scope esta ligado aos RESULTADOS daquela palavra e nao somente a palavra em si. <br> 
+    VISUALIZAR : <a href="desafio3.html"> DESAFIO 3 </a> PARA ENTENDER MELHOR <br>
+   </p>
+
+<H2> Efeito zebrado</H2>
+   <p>
+    Para fazer o efeito "zebrado" eu uso o :nth-child(even) nos TRs e coloco um background-color diferente para as linhas pares - even ou posso escolher o ODD que significa impar. <br>
+   </p>
+
+   <h2>Cabeçalho fixo</h2>
+   <p>
+    Se eu quero que o cabecalho da minha tabela fique fixo, eu uso o position: sticky; e o top: 0; no meu <br>
+   </p>
+
+   <h2>Mesclagem de celulas</h2>
+   <p>
+    Para utilizar o SPAN, propriedade que mescla duas ou mais células, eu uso o atributo COLSPAN e ROWSPAN. <br>
+    O COLSPAN mescla as colunas e o ROWSPAN mescla as linhas. <br>
+    Exemplo na tabela 3: eu apaguei a letra C e defini que a letra B ocuparia seu espaço, ou seja, o espaço de duas colunas. Logo: COLSPAN=2. <br>
+    Apaguei tambem a letra G, defini que a letra D ocupasse seu lugar, logo ela ocuparia o espaço de duas linhas, então ROWSPAN=2. <br>
+   </p>
+   <p>
+    Visualizar <a href="Desafio1.html">desafio 1</a> e <a href="desfaio2.html">desafio 2</a> para entender melhor <br> 
+   </p>
+
+   <p>
+    Se eu quiser alterar o tamho de apenas uma coluna na minha tabela, eu uso o style="width: 90px;" dentro da tag TH ou no TD. <br>
+   </p>
+
+   <h2>Destacando colunas</h2>
+   Se eu quiser destacar uma coluna inteira eu poderia definir o mesmo class para todos os elementos dessa coluna, porém se ela for muito grande eu posso fazer isso de uma vez só usando o COLGROUP. <br>
+   Para utilizá-lo eu abro a tag coulgroup e dentro dela coloco a tag col, sendo que cada col que eu colocar dentro do colgroup vai representar uma coluna da minha tabela respectivamente. <br>
+   Devo me lembrar de atribuir ao título da tabela (th) o Scope col para que formate todos os elementos embaixo dele. Dentro de cada Col eu defino um Class e no meu style personalizo esse Class.
+
    <h2>
-    EXEMPLO DE TABELA
+    EXEMPLO DE TABELA 1
    </h2>
 
    <Table>
@@ -70,5 +209,156 @@
       <td>C3</td>
     </tr>
    </Table>
+
+   <H2>
+    EXEMPLO DE TABELA 2
+   </H2>
+
+   <table class="estados">
+    <caption> População das Unidades Federativas</caption>
+    <thead>
+      <tr>
+        <th scope="col">Estado</th>
+        <th scope="col" style="width: 90px;">População</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>São Paulo</td>
+        <td class="num">45 973 194</td>
+      </tr>
+      <tr>
+        <td>Minas Gerais</td>
+        <td class="num">21 322 691</td>
+      </tr>
+      <tr>
+        <td>Rio de Janeiro</td>
+        <td class="num">17 219 679</td>
+      </tr>
+      <tr>
+        <td>Bahia</td>
+        <td class="num">14 850 513</td>
+      </tr>
+      <tr>
+        <td>Paraná</td>
+        <td class="num">11 824 665</td>
+      </tr>
+      <tr>
+        <td>Rio Grande do Sul</td>
+        <td class="num">11 229 915</td>
+      </tr>
+      <tr>
+        <td>Pernambuco</td>
+        <td class="num">9 539 029</td>
+      </tr>
+      <tr>
+        <td>Ceará</td>
+        <td class="num">9 233 656</td>
+      </tr>
+      <tr>
+        <td>Pará</td>
+        <td class="num">8 664 306</td>
+      </tr>
+      <tr>
+        <td>Santa Catarina</td>
+        <td class="num">8 058 441</td>
+      </tr>
+      <tr>
+        <td>Goiás</td>
+        <td class="num">7 350 483</td>
+      </tr>
+      <tr>
+        <td>Maranhão</td>
+        <td class="num">7 010 960</td>
+      </tr>
+      <tr>
+        <td>Amazonas</td>
+        <td class="num">4 281 209</td>
+      </tr>
+      <tr>
+        <td>Paraíba</td>
+        <td class="num">4 145 040</td>
+      </tr>
+      <tr>
+        <td>Espírito Santo</td>
+        <td class="num">4 102 129</td>
+      </tr>
+      <tr>
+        <td>Mato Grosso</td>
+        <td class="num">3 836 399</td>
+      </tr>
+      <tr>
+        <td>Rio Grande do Norte</td>
+        <td class="num">3 446 071</td>
+      </tr>
+      <tr>
+        <td>Piauí</td>
+        <td class="num">3 375 646</td>
+      </tr>
+      <tr>
+        <td>Alagoas</td>
+        <td class="num">3 220 104	</td>
+      </tr>
+      <tr>
+        <td>Distrito Federal</td>
+        <td class="num">2 982 818</td>
+      </tr>
+      <tr>
+        <td>Mato Grosso do Sul</td>
+        <td class="num">2 901 895</td>
+      </tr>
+      <tr>
+        <td>Sergipe</td>
+        <td class="num">2 291 077</td>
+      </tr>
+      <tr>
+        <td>Rondônia</td>
+        <td class="num">1 746 227</td>
+      </tr>
+      <tr>
+        <td>Tocantins</td>
+        <td class="num">1 577 342</td>
+      </tr>
+      <tr>
+        <td>Acre</td>
+        <td class="num">880 631</td>
+      </tr>
+      <tr>
+        <td>Amapá</td>
+        <td class="num">802 837</td>
+      </tr>
+      <tr>
+        <td>Roraima</td>
+        <td class="num">716 793</td>
+      </tr>
+      <tfoot>
+        <tr>
+          <th scope="row">Total de Habitantes</th>
+          <td class="num"><STRONG>213 993 437</STRONG></td>
+        </tr>
+      </tfoot>
+   </table>
+
+   <h2> TABELA 3</h2>
+   <table class="span">
+    <CAption>SPAN</CAption>
+    <tr>
+      <td>A</td>
+      <td colspan="2">B</td>
+    </tr>
+    <tr>
+      <td rowspan="2">D</td>
+      <td>E</td>
+      <td>F</td>
+
+    </tr>
+    <tr>
+      <td>H</td>
+      <td>I</td>
+
+    </tr>
+
+
+   </table>
 </body>
 </html>
