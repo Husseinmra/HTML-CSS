@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tudo sobre iframe</title>
+
+  <style>
+iframe.tabela {
+display: block;
+margin: auto;
+width: 700px;
+height: 500px;
+}
+
+iframe.interativo {
+display: block;
+margin: auto;
+border: 2px solid #000;
+width: 700px;
+height: 500px;
+}
+
+
+  </style>
+</head>
+<body>
+  <h1>Iframe</h1>
+  <h2>O que é?</h2>
+  <p>
+    Iframe é uma tag, do tipo inline, que criar uma "caixa" dentro do html onde nele será exibido outro html, ou seja, um site dentro de outro site. Podendo ser um site da web ou um site que eu mesmo criei.
+    <br>
+
+    <h2>Problemas</h2>
+    Porém, nem todos os sites externos aceitam serem exibidos dentro de um iframe, por questões de segurança.
+  </p>
+  <p>
+    Se o navegador não conseguir carregar o iframe, ele irá exibir a mensagem ou link que eu colocar dentro da Tag. logo após eu definir os parametros da tag iniciais <br>
+    Posso tambem definir o tamanho do iframe, a borda, o scroll e o alinhamento.
+  </p>
+  <p>
+    O problema do iframe no caso do html é que ele perde a semântica, ou seja, o google não consegue indexar o conteúdo que está dentro do iframe. <br>
+    O que pode ser um problema para o SEO do site, já que o google não consegue entender o que está dentro do iframe. <br>
+    É mais recomendado usar o iframe para exibir conteúdo externo, como vídeos do youtube, mapas do google, etc. <br>
+    E não para exibir conteúdo interno, como tabelas, imagens, etc. <br>
+    Eles podem piorar o indexamento do Google e ainda deixar o site mais pesado. Tmabém causa dificuldade com funções abançar e voltar dentro do site que estou navegando no iframe, a função target blank e etc.
+  </p>
+  <h2> iframe interativo </h2>
+  <p>
+    Posso também criar interações no meu site usando o iframe, como por exemplo, ao clicar em um botão ou link, abrir dentro do iframe o conteúdo desejado. <br>
+    Para isso, eu coloco a tag name no iframe e escolho um nome e no link que eu criei, que levará a algum conteudo que eu defini na tag normalmente eu coloco o target com o mesmo nome que defini na na tag name dentro do iframe e nao preciso usar o (_) antes.
+  </p>
+  <h2> Capa do Iframe</h2>
+  <p>
+    Por padrão, o iframe, se eu nao definir um SRC com o link (interno ou externo), ele irá abrir uma página em branco. <br>
+    E se eu não definir o tamanho, ele irá abrir o iframe com o tamanho padrão do navegador. <br>
+    Porém, posso definir conteúdos de "capa" para o iframe até que o usuario clique em algum link ou botão para abrir o conteúdo desejado. <br>
+    Para isso eu uso o SRCDOC que me permite escrever em HTML dentro do iframe como frases que aparecerão para o usuário e imagens. O conteudo, neste caso, deve ser escrito um seguido do outro, sem pular linhas e o iframe irá abrir o conteúdo que eu escrevi dentro dele. <br>
+  </p>
+
+  <h2>Segurança</h2>
+  <P>
+    Como o iframe é outro site dentro do meu site, posso ter problemas com segurança, como por exemplo, o site que eu estou exibindo dentro do iframe pode ter um código malicioso que pode prejudicar o meu site. <br> para evitar isso, posso usar o atributo sandbox que me permite definir quais ações o iframe pode executar. <br>
+    O sandbox é uma forma de proteger o meu site de códigos maliciosos que podem estar dentro do iframe. <br> nele defino a opção de sandbox que pode ser: <br>
+    <ul>
+      <li>allow-forms: permite o envio de formulários</li>
+      <li>allow-modals: permite abrir janelas modais</li>
+      <li>allow-orientation-lock: permite bloquear a orientação do dispositivo</li>
+      <li>allow-pointer-lock: permite bloquear o ponteiro do mouse</li>
+      <li>allow-presentation: permite apresentar o conteúdo em tela cheia</li>
+      <li>allow-same-origin: permite acessar o conteúdo do iframe como se fosse da mesma origem</li>
+      <li>allow-scripts: permite executar scripts dentro do iframe</li>
+      <li>allow-top-navigation: permite navegar para o topo da página</li>
+      <li>SANDBOX: MÁXIMA PROTEÇÃO</li>
+    </ul>
+      Posso também usar o referrerpolicy e definir no-referrer que não irá enviar o link do meu site para o site que estou exibindo dentro do iframe. <br>
+      Isso protege meu site e seus usuários.
+  </P>
+  <h2>Colocando Maps, Waze e Docs</h2>
+  <p>
+    Posso colocar mapas do google e waze como formas de iframe, mas para isso, preciso usar o link do iframe que o google e o waze me fornecem. <br>
+    Para isso, preciso acessar o site do google maps ou waze e clicar no botão compartilhar. <br>
+    Depois, clico em incorporar mapa e copio o link que o google ou waze me fornece. <br>
+    Posso também indexar slides e apresentações do Google DOCS, Google Apresentações e Google Planilhas. <br> 
+    Clico em arquivo > publicar na web > incorporar e copio o link que o google me fornece. <br>
+  </p>
+
+  <h1>EXEMPLOS</h1>
+
+  <h2>
+    Exemplos de Iframe Externo
+  </h2>
+
+  <p>
+    Acesse o meu 
+    <iframe src="https://github.com/Husseinmra/HTML-CSS" frameborder="1">
+<P> SEU SITE NÃO É COMPATIVEL COM ISSO</P> <!-- SE O NAVEGADOR NÃO CONSEGUIR CARREGAR O IFRAME, ELE IRÁ EXIBIR A MENSAGEM OU LINK QUE EU COLOCAR DENTRO DA TAG. LOGO APÓS EU DEFINIR OS PARAMETROS DA TAG INICIAIS -->
+    </iframe> 
+    e aprenda mais sobre HTML e CSS
+  </p>
+
+  <h2>
+    Exemplo de iframe interno
+  </h2>
+  
+  <p>
+    Veja a tabela abaixo para conferir suas notas nas disciplinas de exatas e humanas:
+
+    <iframe class="tabela" src="../TABELAS/desafio4.html" frameborder="0">
+      <P> SEU SITE NÃO É COMPATIVEL COM ISSO</P> <!-- SE O NAVEGADOR NÃO CONSEGUIR CARREGAR O IFRAME, ELE IRÁ EXIBIR A MENSAGEM OU LINK QUE EU COLOCAR DENTRO DA TAG. LOGO APÓS EU DEFINIR OS PARAMETROS DA TAG INICIAIS -->
+    </iframe>
+  </p>
+
+  <p>
+    Texto extra para testar o scroll do iframe, caso o tamanho do iframe seja menor que o conteúdo exibido dentro dele. <br>
+  </p>
+
+  <h2> iframe interativo</h2>
+<P>
+  ESCOLHA UMA OPÇÃO:
+</P>
+
+<UL>
+  <LI><a href="pagina1.html" target="iframe">Pagina 1</a></LI>
+  <LI><a href="pagina2.html" target="iframe">Pagina 2</a></LI>
+</UL>
+
+<iframe class="interativo" name="iframe" srcdoc = "<h1> Escolha uma opção acima </h1><img/..... />" ></iframe>
+
+</body>
+</html>
