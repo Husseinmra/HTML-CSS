@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulários</title>
+</head>
+<body>
+
+  <h1>
+    Tudo sobre formulários
+  </h1>
+
+  <p>
+    Formulários são uma parte essencial da web, permitindo que os usuários interajam com sites e aplicativos. Eles são usados para coletar informações, como nomes, endereços, emails e preferências.
+  </p>
+  <p>
+    Para criar um formulário eu devo usar a tag FORM edentro dela definir o que vai ser enviado para o servidor. <br>
+    Desta forma eu crio um nome e sobre nome e um botão de enviar  por exemplo. <br>
+    Para criar a "caixinha" de texto eu devo usar a tag INPUT e nela definir o tipo de input que vai ser criado. <br>
+    No caso de input de texto eu devo usar o input text e para criar o botão de enviar eu devo usar o input submit. <br>
+  </p>
+  <p>
+    <p>
+      O input tem elementos como name e id que são usados para identificar o input. <br>
+      Posso colocar nomes iguais para o name e id, mas não é uma boa prática. <br>
+      O name é o nome que vai ser enviado para o servidor e o id é o id do input. <br>
+    </p>
+    <p>
+    Quando eu crio um formulário, além de ter botões e caixinhas precisa haver semântica entre o input e o nome que está escrito. <br>
+    Para isso eu devo usar a tag LABEL no texto fora da caixa e dentro dela colocar o id do input. <br>
+    Desta forma, quando o usuário clicar no nome, a caixinha de texto vai ser selecionada. <br>
+  </p>
+  <p>
+    Existe também os métodos GET e POST que são usados para enviar os dados para o servidor. <br>
+    O GET é usado para enviar dados sem segurança e o POST é usado para enviar dados com segurança e arquivos maiores (com mais de 3000 caracteres). <br>
+  </p>
+
+  <p>
+    outros atributos que posso definir no input são: <br>
+    placeholder: que é o texto que vai ser exibido dentro da caixinha de texto. Como exemplo: "Digite seu nome". <br>
+    required: que é um input que é obrigatório ser preenchido. Se não for preenchido, o formulário não vai ser enviado e exibirá uma mensagem de erro automaticamente. <br>
+    minlength e maxlength: que são o mínimo e máximo de caracteres que podem ser escritos na caixinha de texto. <br>
+    size: que é o tamanho da caixinha de texto relacionada ao número de caracteres, lembrando que isso não é a quantidade de caracteres que pode ser escrito, mas sim o tamanho que será exibido. <br>
+    autocomplete: que é um parâmetro utilizado no form e no input para definir se o navegador vai preencher automaticamente o input com os dados já escritos pelo usuário. Se eu habilitar isso no form eu posso definir o tipo de autocomplete no input como senha, usuario, idade e etc<br>
+    
+  </p>
+  <p>
+    Posso também criar os botões de envio e limpar o formulário usando o input do tipo submit e do tipo reset respectivamente. <br>
+  </p>
+  <p>
+    Alguns formatos de input mais conhecidos são: <br>
+    <ul>
+      <li>text</li>
+      <li>password</li>
+      <li>email</li>
+      <li>number</li>
+      <li>date</li>
+      <li>tel</li>
+      <li>color</li>
+      <li>range</li>
+      <li>search</li>
+      <li>url</li>
+      <li>week</li>
+      <li>month</li>
+
+    </ul>
+    e em cada um deles posso posso definir o VALUE que é um valor padrão que vai ser exibido na caixinha de texto e que tenha relação com aquele dado, diferente do placeholder em que eu posso colocar o que eu quiser. <br>
+  </p>
+  <h1>Teste de formulário</h1>
+
+  <form action="cadastro.php" autocomplete="off">
+    <label for="inome">
+      <p>nome:
+    </label> 
+      <input type="text" name="nome" id="inome"></p>
+    <label for="isobrenome">
+      <p>sobrenome: 
+    </label> 
+      <input type="text" name="sobrenome" id="isobrenome"></p>
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>
