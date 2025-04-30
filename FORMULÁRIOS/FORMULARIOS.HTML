@@ -131,6 +131,16 @@
     placeholder NÃO funciona aqui. <br>
   </p>
 
+  <h2> Output </h2>
+  <p>
+    Posso usar também a tag output para criar um campo de saída de dados. <br>
+    Para isso abro a tag output, defino name e id, como normalmente faço no input <br>
+    Posso, por exemplo, dizer que o output vai ser a soma de valores de outros campos (INPUTS) ou até mesmo o valor de um input de range que aparecerá ao lado da "barrinha" do range.<br>
+    Então, dentro de cada input eu adiciono o atributo oninput = "o nome do id do OUTPUT.innerHTML (dizer que vai considerar o que esta escrito no html) = Number(id do input 1.value - valor digitado no campo do primeiro input) + Number(id do input 2.value - valor digitado no campo do segundo input)" 
+    <br>
+    No caso do range, eu defino o atributo oninput = "o nome do id do OUTPUT.innerHTML (dizer que vai considerar o que esta escrito no html) = Number (id do input(range).value - valor digitado no campo do input(range)" 
+  </p>
+
   <h1>Teste de formulário</h1>
 
   <form action="cadastro.php" autocomplete="off">

@@ -25,9 +25,17 @@
       <label for="ihora">Hora da Prova:</label>
       <input type="time" name="hora" id="ihora" required>
     </fieldset>
+    <br>
+
+    <label for="isats">Satisfação com o curso:</label>
+    <input type="range" name="sats" id="isats" required min="0" max="10" step="1" value="5"
+    oninput="outSats.innerHTML = Number(isats.value)">
+    <output name="outSats" id="outSats">5</output> <br> <br>
 
     <input type="submit" value="Enviar">
     <input type="reset" value="Limpar" required>
+
+
 
   </form> 
 
