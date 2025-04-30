@@ -11,62 +11,126 @@
     Tudo sobre formulários
   </h1>
 
+  <h2> O Que São? </h2>
   <p>
     Formulários são uma parte essencial da web, permitindo que os usuários interajam com sites e aplicativos. Eles são usados para coletar informações, como nomes, endereços, emails e preferências.
   </p>
+
+  <h2> Como Criar? </h2>
   <p>
-    Para criar um formulário eu devo usar a tag FORM edentro dela definir o que vai ser enviado para o servidor. <br>
-    Desta forma eu crio um nome e sobre nome e um botão de enviar  por exemplo. <br>
-    Para criar a "caixinha" de texto eu devo usar a tag INPUT e nela definir o tipo de input que vai ser criado. <br>
-    No caso de input de texto eu devo usar o input text e para criar o botão de enviar eu devo usar o input submit. <br>
-  </p>
-  <p>
-    <p>
-      O input tem elementos como name e id que são usados para identificar o input. <br>
-      Posso colocar nomes iguais para o name e id, mas não é uma boa prática. <br>
-      O name é o nome que vai ser enviado para o servidor e o id é o id do input. <br>
-    </p>
-    <p>
-    Quando eu crio um formulário, além de ter botões e caixinhas precisa haver semântica entre o input e o nome que está escrito. <br>
-    Para isso eu devo usar a tag LABEL no texto fora da caixa e dentro dela colocar o id do input. <br>
-    Desta forma, quando o usuário clicar no nome, a caixinha de texto vai ser selecionada. <br>
-  </p>
-  <p>
-    Existe também os métodos GET e POST que são usados para enviar os dados para o servidor. <br>
-    O GET é usado para enviar dados sem segurança e o POST é usado para enviar dados com segurança e arquivos maiores (com mais de 3000 caracteres). <br>
+    Eu quero criar, por exemplo, um nome e um sobrenome, com caixas de digitação ao lado e um botão de enviar e limpar embaixo. <br>
+    Para isso eu devo usar a tag FORM e entro dela definir o que vai ser perguntado e o que vai ser enviado para o servidor. <br>
+    Então eu crio um paragrafo ou uma div e escrevo o que eu quero que seja perguntado. <br>
+    Para criar a "caixinha" ao lado do texto eu devo usar a tag INPUT e nela definir o tipo de INPUT que vai ser criado. Lista de Inputs mais adiante.<br>
   </p>
 
-  <p>
-    outros atributos que posso definir no input são: <br>
-    placeholder: que é o texto que vai ser exibido dentro da caixinha de texto. Como exemplo: "Digite seu nome". <br>
-    required: que é um input que é obrigatório ser preenchido. Se não for preenchido, o formulário não vai ser enviado e exibirá uma mensagem de erro automaticamente. <br>
-    minlength e maxlength: que são o mínimo e máximo de caracteres que podem ser escritos na caixinha de texto. <br>
-    size: que é o tamanho da caixinha de texto relacionada ao número de caracteres, lembrando que isso não é a quantidade de caracteres que pode ser escrito, mas sim o tamanho que será exibido. <br>
-    autocomplete: que é um parâmetro utilizado no form e no input para definir se o navegador vai preencher automaticamente o input com os dados já escritos pelo usuário. Se eu habilitar isso no form eu posso definir o tipo de autocomplete no input como senha, usuario, idade e etc<br>
-    
+  <h2> Elementos do Input </h2>
+    <p>
+      O input tem elementos como name e id que são usados para identificação. <br>
+      Posso colocar names iguais para identificar um grupo de informações (Ex: pessoais, familia, contato, etc) e id que será relativo a cada input específico. <br>
+      O name é o nome que vai ser enviado para o servidor e o id é a identificação do input. <br>
+    </p>
+
+  <h2> Label </h2>
+    <p>
+    Quando eu crio um formulário, além de ter botões e caixinhas precisa haver semântica entre o input e o nome que está escrito ao lado. <br>
+    Para isso eu devo usar a tag LABEL no texto fora da caixa (na pergunta) e dentro dessa tag colocar o id específico do input e não o name. <br>
+    Desta forma, quando o usuário clicar no nome, a caixinha de texto vai ser selecionada pois existe uma correlação semântica entre a pergunta e a caixa de texto. <br>
   </p>
+
+  <h2> Métodos GET e POST </h2>
   <p>
-    Posso também criar os botões de envio e limpar o formulário usando o input do tipo submit e do tipo reset respectivamente. <br>
+    Existe também os métodos GET e POST que são usados para enviar os dados para o servidor. <br>
+    O GET é usado para enviar dados sem segurança (ficam visíveis na url) e o POST é usado para enviar dados com mais segurança (ainda podem ser obtidos com o DevTools e por isso não é recomendado enviar dados sensíveis) e arquivos maiores (com mais de 3000 caracteres). <br>
   </p>
+
+  <h2> Atributos do Input </h2>
+  <p>
+    Atributos que posso definir no input são: <br>
+    <ul>
+      <li>Placeholder: que é o texto que vai ser exibido dentro da caixinha de texto. Como exemplo: "Digite seu nome".</li>
+      <li>Required: que é um input obrigatório a ser preenchido. Se não for preenchido, o formulário não vai ser enviado e exibirá uma mensagem de erro automaticamente.</li>
+      <li>minlength e maxlength: que são o mínimo e máximo de caracteres que podem ser escritos na caixinha de texto.</li>
+      <li>size: que é o tamanho da caixinha de texto relacionada ao número de caracteres, lembrando que isso não é a quantidade de caracteres que pode ser escrito, mas sim o tamanho que será exibido.</li>
+      <li>autocomplete: que é um parâmetro utilizado no form (tag de abertura) e no input para definir se o navegador vai preencher automaticamente o input com os dados já escritos pelo usuário. Se eu habilitar isso no form (on) eu posso definir o tipo de autocomplete no input como senha, usuario, idade, email e etc.</li>
+    </ul>
+  </p>  
+
+  <h2> Tipos de Input </h2>
   <p>
     Alguns formatos de input mais conhecidos são: <br>
     <ul>
-      <li>text</li>
-      <li>password</li>
-      <li>email</li>
-      <li>number</li>
-      <li>date</li>
-      <li>tel</li>
-      <li>color</li>
-      <li>range</li>
-      <li>search</li>
-      <li>url</li>
-      <li>week</li>
-      <li>month</li>
-
+      <li>text - para criar um input de texto</li>
+      <li>password - para criar um input de senha</li>
+      <li>email - para criar um input de email</li>
+      <li>number - para criar um input de número</li>
+      <li>date - para criar um input de data</li>
+      <li>tel - para criar um input de telefone</li>
+      <li>color - para criar um input de cor (vai abrir uma paleta de cores em hexadecimal)</li>
+      <li>range - para criar um input de escolha (ex 1 a 5)</li>
+      <li>search - para criar um input de busca</li>
+      <li>url - para criar um input de url</li>
+      <li>week - para criar um input de semana</li>
+      <li>month - para criar um input de mês</li>
+      <li>checkbox - para criar opções de marcação de caixa</li>
+      <li>radio - para criar um grupo de inputs de mesmo nome</li>
+      <li>submit - para criar um botão de envio</li>
+      <li>reset - para criar um botão de limpar</li>
+      <li>button - para criar um botão</li>
+      <li>file - para criar um input de arquivo (escolher imagem por ex)</li>
+      <li>image - para criar um input de imagem</li>
+      <li>hidden - para criar um input oculto</li>
+      <li>datetime-local - para criar um input de data e hora</li>
     </ul>
-    e em cada um deles posso posso definir o VALUE que é um valor padrão que vai ser exibido na caixinha de texto e que tenha relação com aquele dado, diferente do placeholder em que eu posso colocar o que eu quiser. <br>
+    e em cada um deles posso posso definir o VALUE que é um valor padrão que vai ser exibido na caixinha de texto e que tenha relação com aquele dado pois será enviado posteriormente a um servidor (PHP) diferente do placeholder em que eu posso colocar o que eu quiser ou dar dicas de como preencher o input. <br>
   </p>
+
+  <h2> Expressões Regulares </h2>
+  <p>
+    Estudar mais sobre expressões regulares. REGEX. Pois posso utilizar elas para validar o input de email, telefone, etc com o atributo pattern. <br>
+    Basicamente ele funcina com ! e o final da expressão $. Dentro disso eu defino as regras que o input deve seguir. <br>
+  </p>
+
+  <h2> Fieldset e Legend </h2>
+  <p>
+    Posso ainda agrupar um conjunto de inputs em um grupo com a tag FIELDSET. <br>
+    Dentro dela posso colocar um legend que é o título do grupo. <br>
+    Essa tag de divisão é muito util para dividir o tipo de informação que eu quero coletar no meu formulário. <br>
+    Exemplo: dados pessoiais, família, contato, etc. <br>
+  </p>
+
+  <h2> Checkbox e Radio Button </h2>
+  <p>
+    Posso usar também checkbox para criar opções de marcação de caixa (posso marcar vários ou não marcar) e radio button para criar opções de marcação de botão (posso escolher um ou outro). <br>
+    Importante lembrar que eu devo definir um VALUE para cada opção pois quando o usuário marcar a opção e enviar o formulário, o valor será enviado para o servidor sem o valor específico daquela opção e sim, on ou off somente. <br>
+  </p>
+
+  <h2> Select </h2>
+  <p>
+    Posso usar também a tag select, que funciona igual tag INPUT, para criar uma lista de opções (ex escolha um estado). <br>
+    Dentro dela posso usar a tag option para criar cada opção (nome de cada estado) e defino tb o VALUE para ser enviado ao servidor (tipo: MG, SP, RJ etc) e o texto que vai ser exibido na tela (ex Minas Gerais, São Paulo, Rio de Janeiro etc). <br>
+    Posso também usar a tag optgroup para criar um grupo de opções (envelopo todas as optinos) e definir um label = nome do grupo. <br>
+    
+  </p>
+
+  <h2>Datalist</h2>
+  <p>
+    Posso usar também a tag datalist para criar uma lista de opções pre definidas com o diferencial de que o usuário pode digitar o que quiser e a tag vai sugerir uma opção. <br>
+    Diferente da tag anterior que o usuário so pode escolher uma opção e não pode digitar. <br>
+    Para isso abro a tag datalist e dentro dela crio uma tag option para cada opção. <br>
+    Depois abro a tag input de texto e ao final dela defino o atributo list = nome da tag datalist que virá logo abaixo do input e dou um ID na datalist com o mesmo nome do input definido no list e pronto. <br>
+    O usuário pode digitar o que quiser e a tag vai sugerir uma opção. <br>
+    Posso também definir o VALUE de cada opção para ser enviado ao servidor. <br>
+  </p>
+
+  <h2> Textarea </h2>
+  <p>
+    Posso usar também a tag textarea para criar um campo de digitação livre para o usuário escrever o que quiser. <br>
+    Para isso abro a tag textarea, defino name e id, como normalmente faço no input e em seguida, para configurar o tamanho eu defino o atributo cols e rows. <br>
+    Interessante usar o método post pois provavelmente será um arquivo com mais de 3kbytes e o método get não é recomendado para isso. <br>
+    placeholder NÃO funciona aqui. <br>
+  </p>
+
   <h1>Teste de formulário</h1>
 
   <form action="cadastro.php" autocomplete="off">
