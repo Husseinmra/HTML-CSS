@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media queries</title>
+  <link rel="stylesheet" href="estilos/style.css" media="screen">
+  <link rel="stylesheet" href="estilos/impressora.css" media="print">
+</head>
+<body>
+  <h1>Tudo sobre media queries</h1>
+  <h2>O que são?</h2>
+  <p>As media queries nada mais são do que uma forma de criar estilos diferentes para diferentes dispositivos. <br>
+    Eles são arquivos css separados que são chamados de acordo com a necessidade do dispositivo. Para isso, dentro da tag do CSS eu adiciono a tag media= e o tipo de dispositivo que eu quero que o estilo seja aplicado. <br>
+    Exemplos de media queries: <br>
+    <ul>
+      <li>media="screen" - para telas</li>
+      <li>media="print" - para impressão</li>
+      <li>media="all" - para todos os dispositivos</li>
+    </ul>
+  </p>
+  <p>
+    olhar exemplo do HEAD.
+  </p>
+  <h2>Media features</h2>
+  <p></p>
+    As media features são uma forma de criar estilos diferentes para diferentes dispositivos. <br>
+    Elas são escritar entre parenteses em seguida do media type<br>
+    Exemplo: <br>
+    <ul>
+      <li>media= "screen and (max-width: 768px)" - para telas menores que 768px</li>
+      <li>media= "screen and (orientation: portrait)" - para telas em modo retrato</li>
+      <li>media= "screen and (orientation: landscape)" - para telas em modo paisagem</li>
+    </ul>
+  </p>
+
+  <h2>Usando o @media</h2>
+  <p>
+    O @media é uma forma de criar estilos diferentes para diferentes dispositivos de maneira unificada. <br>
+    Ele é escrito no style local de CSS ou em um unico arquivo CSS para unificar todos os estilos em um só arquivo. <br>
+    Exemplo: <br>
+   
+    <p>
+      @media screen and (max-width: 768px) {
+        body {
+          background-color: red;
+        }
+      }
+      @media screen and (orientation: portrait) {
+        body {
+          background-color: red;
+        }
+      }
+    </p>
+    <p>
+      @media screen and (max-width: 768px) {
+        body {
+          background-color: red;
+          }
+  </p>
+
+  <p>
+    Então eu posso ter Varios arquivos de CSS com media types diferentes com seus respectivos media features no HEAD para cada dispositivo (recomendado), posso abrir um STYLE local no meu HTML e escrever o @media para que cada um tenha uma configuração diferente para cada dispositivo que eu quero que o estilo seja aplicado, ou posso abrir um unico arquivo CSS e escrever o @media para cada dispositivo que eu quero que o estilo seja aplicado.
+  </p>
+
+  <h2>Devices Breakpoints</h2>
+  <p>
+    Os devices breakpoints são os pontos de quebra de tela que eu quero que o estilo seja aplicado. <br>
+    Eles são escritos em pixels e são usados para criar estilos diferentes para diferentes dispositivos. <br>
+    Exemplo: <br>
+    <ul>
+      <li>1200px + : Telas Grandes</li>
+      <li>992px - 1200px: Desktop</li>
+      <li>768px - 992px: Tablet</li>
+      <li>600px - 768px: Mobile</li>
+      <li>Até 600px: Telas Pequenas</li>
+    </ul>
+  </p>
+
+  <p>
+    Para utilizar os devices breakpoints, eu posso usar o @media para criar estilos diferentes para cada dispositivo. <br>
+    Exemplo: <br>
+    <ul>
+      <li>@media screen (min-width: 992px) and (max-width: 1200px) {}
+    </ul>
+    <p>
+      Neste caso, o estilo será aplicado para todos os dispositivos que estão entre 992px e 1200px. Caso eu queira que uma imagem apareça apenas nessa media eu dou display none para os outros que ja carreguei e coloco display block para a que eu quero que apareça.
+    </p>
+  </p>
+</body>
+</html>
