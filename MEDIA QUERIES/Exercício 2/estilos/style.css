@@ -19,6 +19,46 @@ body {
   background-position: center center;
 }
 
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+#burguer {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#burguer:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+menu {
+  display: none;
+}
+
+menu ul {
+  list-style-type: none;
+}
+
+menu ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+menu ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 main {
   background-color: rgba(240, 248, 255, 0.619);
   width: 80vw;
@@ -40,16 +80,18 @@ img {
   margin: auto;
 }
 
-img#phone { display: block; }
-img#tablet { display: none; }
-img#print { display: none; }
-img#pc { display: none; }
-img#tv { display: none; }
-
-
-
-
-
-
-
-
+img#phone {
+  display: block;
+}
+img#tablet {
+  display: none;
+}
+img#print {
+  display: none;
+}
+img#pc {
+  display: none;
+}
+img#tv {
+  display: none;
+}

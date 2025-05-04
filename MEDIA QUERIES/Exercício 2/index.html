@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>media queries</title>
-  <link rel="stylesheet" href="estilos/style.css" media="all">
-  <link rel="stylesheet" href="estilos/mediaqueries.css">
-</head>
-<body>
-  
-  <main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media queries</title>
+    <link rel="stylesheet" href="estilos/style.css" media="all" />
+    <link rel="stylesheet" href="estilos/mediaqueries.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Menu</h1>
+      <span id="burguer" class="material-symbols-outlined">menu</span>
+      <menu id="itens">
+        <ul>
+          <li><a href="#">Opção 1</a></li>
+          <li><a href="#">Opção 2</a></li>
+          <li><a href="#">Opção 3</a></li>
+          <li><a href="#">Opção 4</a></li>
+          <li><a href="#">Opção 5</a></li>
+        </ul>
+      </menu>
+    </header>
+
+    <main>
       <h1>Testando media queries</h1>
-      <img id="phone" src="imagens/icon-phone.png" alt="icone de telefone">
-      <img id="tablet" src="imagens/icon-tablet.png" alt="icone de tablet">
-      <img id="print" src="imagens/icon-print.png" alt="icone de impressora">
-      <img id="pc" src="imagens/icon-pc.png" alt="icone de pc">
-      <img id="tv" src="imagens/icon-tv.png" alt="icone de tv">
+      <img id="phone" src="imagens/icon-phone.png" alt="icone de telefone" />
+      <img id="tablet" src="imagens/icon-tablet.png" alt="icone de tablet" />
+      <img id="print" src="imagens/icon-print.png" alt="icone de impressora" />
+      <img id="pc" src="imagens/icon-pc.png" alt="icone de pc" />
+      <img id="tv" src="imagens/icon-tv.png" alt="icone de tv" />
     </main>
-  
-</body>
+
+    <script>
+      const menu = document.getElementById("itens");
+      const burguer = document.getElementById("burguer");
+
+      burguer.addEventListener("click", function () {
+        if (menu.style.display === "block") {
+          menu.style.display = "none";
+        } else {
+          menu.style.display = "block";
+        }
+      });
+    </script>
+  </body>
 </html>
