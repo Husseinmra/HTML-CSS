@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex</title>
+</head>
+<body>
+  
+  <h1> Tudo sobre Flexbox</h1>
+  <p>
+    Flexbox é um modelo de caixa flexível. Os elementos filhos do container são chamados de flex items e podem se adaptar ao espaço disponivel no elemento pai ou container. <br>
+    Desta forma, podemos criar layouts de páginas com flexíveis e responsivos ao aplicar display flex no container (pai) e flex items no elemento filho (itens).
+  </p>
+
+  <h2> Propriedades do Flex Container</h2>
+  <p>
+    São aplicáveis somente ao container (pai) e não aos itens (filhos).
+    <ul>
+      <li>display: flex;</li>
+      <li>flex-direction: row - da esquerda para a direita</li>
+      <li>flex-direction: row-reverse - da direita para a esquerda</li>
+      <li>flex-direction: column - da cima para baixo</li>
+      <li>flex-direction: column-reverse - da baixo para cima</li>
+      
+    </ul>
+  </p>
+  <h3> Eixos (main axis e cross axis)</h3>
+  <p>
+    O eixo principal é o que define a direção do flex container. O eixo transversal é o que define a direção perpendicular ao eixo principal. <br>
+    Para além disso, temos o main start e o main end que definem o inicio e o fim do eixo principal. E o cross start e o cross end que definem o inicio e o fim do eixo transversal. <br>
+    Essas propriedades se alteram se eu aplicar o Reverso (flex-direction: row-reverse; ou flex-direction: column-reverse;), invertendo a direção do eixo principal e transversal. <br>
+    Para exemplificar melhor, veja a imagem abaixo:
+    <img src="IMAGENS/eixos.png" alt="eixos" style="width: 400px; height: 280px; margin-top: 20px;">
+  </p>
+
+  <h2> WRAP </h2>
+  <p>
+    A propriedade flex-wrap define se os flex items serão exibidos em uma ou mais linhas. <br>
+    Ela pode ter 3 valores:
+    <ul>
+      <li>flex-wrap: nowrap - os flex items não serão quebrados em linhas (ESTE É O VALOR PADRÃO)   OU SEJA, SE O CONTAINER NÃO TIVER ESPAÇO SUFICIENTE, OS ITENS ULTRAPASSARÃO O CONTAINER ou serão espremidos</li>
+      <li>flex-wrap: wrap - os flex items serão quebrados em linhas (OS ITENS SE QUEBRARÃO EM LINHAS SE O CONTAINER NÃO TIVER ESPAÇO SUFICIENTE) - Seguirão o cross axis</li>
+      <li>flex-wrap: wrap-reverse - os flex items serão quebrados em linhas e a ordem será invertida (O PRIMEIRO ITEM SE TORNA O ÚLTIMO E O ÚLTIMO ITEM SE TORNA O PRIMEIRO)  OU o ultimo item seguirá o Cross Axis de forma invertida</li>
+    </ul>
+
+    veja a imagem abaixo para entender melhor para onde os ultimos blocos seguem:
+    <h4>Caso eu use o flex wrap:</h4>
+
+    <img src="IMAGENS/wrap.png" alt="wrap" style="width: 400px; height: 280px; margin-top: 20px;">
+
+    <h4>Caso eu use o flex wrap reverse:</h4>
+    <img src="IMAGENS/wrapreverse.png" alt="wrap" style="width: 400px; height: 280px; margin-top: 20px;">
+  </p>
+
+  <h2> FLEX-FLOW </h2>
+  <p>
+    A propriedade flex-flow é uma shorthand para as propriedades flex-direction e flex-wrap. <br>
+    Ela pode ter a mistura de ambas as propriedades. <br>
+      
+  </p>
+
+  <h2> JUSTIFY-CONTENT </h2>
+  <p>
+    A propriedade justify-content define a posição dos flex items ao longo do eixo principal. <br>
+    Ela pode ter 5 valores:
+    <ul>
+      <li>justify-content: flex-start - os flex items serão alinhados ao inicio do eixo principal</li>
+      <li>justify-content: flex-end - os flex items serão alinhados ao fim do eixo principal</li>
+      <li>justify-content: center - os flex items serão alinhados ao centro do eixo principal</li>
+      <li>justify-content: space-between - os flex items serão alinhados com espaço entre eles</li>
+      <li>justify-content: space-around - os flex items serão alinhados com espaço entre eles e também ao redor deles</li>
+
+    </ul>
+
+    veja a imagem abaixo para entender melhor:
+    <img src="IMAGENS/justify.png" alt="justify" style="width: 400px; height: 280px; margin-top: 20px;">
+    
+    <h2> caso eu use o justify-content no modo column:</h2>
+    <img src="IMAGENS/justifycolum.png" alt="justify" style="width: 400px; height: 280px; margin-top: 20px;">
+  </p>
+
+  <h2> ALIGN-ITEMS </h2>
+  <p>
+    A propriedade align-items define a posição dos flex items ao longo do eixo transversal. Ela seguirá o eixo transversal do flex container. <br>
+    Ela pode ter 5 valores:
+    <ul>
+      <li>align-items: flex-start - os flex items serão alinhados ao inicio do eixo transversal</li>
+      <li>align-items: flex-end - os flex items serão alinhados ao fim do eixo transversal</li>
+      <li>align-items: center - os flex items serão alinhados ao centro do eixo transversal</li>
+      <li>align-items: baseline - os flex items serão alinhados a base da linha do texto</li>
+      <li>align-items: stretch - os flex items serão esticados para preencher o container - ESTE É O VALOR PADRÃO</li>
+    </ul>
+
+    veja a imagem abaixo para entender melhor:
+    
+    
+  </p>
+
+  
+  <h2>Align-content</h2>
+  <p>
+    A propriedade align-content define a posição dos flex items (dentro do flex container) ao longo do eixo transversal. <br>
+    Ela pode ter 5 valores:
+    <ul>
+      <li>align-content: flex-start - os flex items serão alinhados ao inicio do eixo transversal</li>
+      <li>align-content: flex-end - os flex items serão alinhados ao fim do eixo transversal</li>
+      <li>align-content: center - os flex items serão alinhados ao centro do eixo transversal</li>
+      <li>align-content: space-between - os flex items serão alinhados com espaço entre eles</li>
+      <li>align-content: space-around - os flex items serão alinhados com espaço entre eles e também ao redor deles</li>
+      <li>align-content: stretch - os flex items serão esticados para preencher o container - ESTE É O VALOR PADRÃO</li>
+      <li>align-content: space-evenly - os flex items serão alinhados com espaço entre eles e também ao redor deles</li>
+    </ul>
+  </p>
+
+  <h2>Flex: auto</h2>
+  <p>
+    Flex: auto - o flex container será flexível e se adaptará ao conteúdo, ou seja, o item que quebrar para a proxima linha ocupará o espaço restante do container <br>
+    Esta propriedade é aplicável somente no flex item (filho) e não no flex container (pai)
+  </p>
+  <h2>ALINHANDO CONTEÚDO</h2>
+  <P>
+    Para alinhar o conteúdo então consideramos o justify-content e o align-items. <br>
+    Assim ajustamos em eixo x e eixo y. <br>
+    Consideramos também o align-content para alinhar os flex items (dentro do flex container) ao longo do eixo transversal. <br>
+  </P>
+</body>
+</html>
