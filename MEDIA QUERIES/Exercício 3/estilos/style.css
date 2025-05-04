@@ -73,6 +73,7 @@ header menu {
  #menu:hover {
   background-color: #956565;
   color: #000;
+  transition: 0.2s;
  }
 
 
@@ -93,6 +94,7 @@ menu ul li a {
 menu  ul li a:hover {
   background-color: #956565;
   color: #000;
+  transition: 0.2s;
 }
 
 
