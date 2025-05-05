@@ -62,7 +62,7 @@
 
   <h2> JUSTIFY-CONTENT </h2>
   <p>
-    A propriedade justify-content define a posição dos flex items ao longo do eixo principal. <br>
+    A propriedade justify-content define a posição dos flex items ao longo do eixo principal,eixo x ou eixo y caso esteja no modo column. <br>
     Ela pode ter 5 valores:
     <ul>
       <li>justify-content: flex-start - os flex items serão alinhados ao inicio do eixo principal</li>
@@ -92,11 +92,9 @@
       <li>align-items: stretch - os flex items serão esticados para preencher o container - ESTE É O VALOR PADRÃO</li>
     </ul>
 
-    veja a imagem abaixo para entender melhor:
-    
-    
   </p>
-
+  
+  <h2>Propriedades do Flex Item (filho)</h2>
   
   <h2>Align-content</h2>
   <p>
@@ -112,7 +110,6 @@
       <li>align-content: space-evenly - os flex items serão alinhados com espaço entre eles e também ao redor deles</li>
     </ul>
   </p>
-
   <h2>Flex: auto</h2>
   <p>
     Flex: auto - o flex container será flexível e se adaptará ao conteúdo, ou seja, o item que quebrar para a proxima linha ocupará o espaço restante do container <br>
@@ -124,5 +121,66 @@
     Assim ajustamos em eixo x e eixo y. <br>
     Consideramos também o align-content para alinhar os flex items (dentro do flex container) ao longo do eixo transversal. <br>
   </P>
+
+  <h2>ORDER</h2>
+
+  <P>
+    A propriedade order define a ordem dos flex items. <br>
+    Ela pode ter um valor numérico que define a ordem de exibição dos flex items. <br>
+    O valor padrão é 0. <br>
+    Ela vai dos numeros negativos até positivos.
+  </P>
+
+  <h2>Align-self</h2>
+  <p>
+    A propriedade align-self define a posição do flex item (filho) ao longo do eixo transversal (cross axis) dentro do flex container (pai). <br>
+    Lembrando para que eu possa definir o align self de cada item preciso definir um ID ou class para cada item. <br>
+    Ela pode ter 5 valores:
+    <ul>
+      <li>align-self: auto - o flex item será alinhado de acordo com o align-items do flex container</li>
+      <li>align-self: flex-start - o flex item será alinhado ao inicio do eixo transversal</li>
+      <li>align-self: flex-end - o flex item será alinhado ao fim do eixo transversal</li>
+      <li>align-self: center - o flex item será alinhado ao centro do eixo transversal</li>
+      <li>align-self: stretch - o flex item será esticado para preencher o container</li>
+      
+    </ul>
+  </p>
+
+  <h2>Flex-basis</h2>
+  <p>
+    A propriedade flex-basis define o tamanho inicial do flex item (filho) dentro do flex container (pai). <br>
+    Ela pode ter um valor numérico que define o tamanho inicial do flex item. <br>
+    Eu posso usar porcentagem ou unidade de medida (px, em, rem, etc) mas O valor padrão é 0. <br>
+    Posso ter o valor auto como definido, que fará com que o flex item se adapte ao conteúdo. <br>
+    Caso eu defina um valor dos filhos, maior que o pai, o filho vai se adaptar ao tamanho do pai e não irá obedecer o que eu defini no flex-basis. Caso eu use o wrap, o filho quebra pra proxima linha obedecendo o flex-basis.
+  </p>
+
+  <h2>Flex-grow e Flex-shrink</h2>
+  <p>
+    A propriedade flex-grow define a capacidade de crescimento do flex item (filho) dentro do flex container (pai). <br>
+    Ela pode ter um valor numérico que define a capacidade de crescimento do flex item. <br>
+    O valor padrão é 0. Ou seja, o flex item não vai crescer. <br>
+    Caso eu defina um valor maior que 0, o flex item vai crescer de acordo com o valor definido de forma PROPORCIONAL, ou seja, um 0 (nao crescer), outro 1 (crescer) e outro 2 (crescer mais ainda). <br>
+    A propriedade flex-shrink define a capacidade de encolhimento do flex item (filho) dentro do flex container (pai). <br>
+    Ela pode ter um valor numérico que define a capacidade de encolhimento do flex item. <br>
+    O valor padrão é 1. Ou seja, o flex item vai encolher de acordo com o valor definido. <br>
+    Caso eu defina um valor menor que 1, o flex item vai encolher de acordo com o valor definido e de maneira proporcional, conforme explicado no flex-grow. <br>
+    Lembrando que os numeros maiores que 1 so funcionarão de maneira proporcional se eu tiver um valor maior que 0 para outro item, pois assim ele terá um referencia para encolher ou crescer-999. <br>
+    Lembrando que o flex shrink e o flex grow estão ativos por padrão. Eles também terão efeito caso eu nao tenha um flex wrap, pois se eu tenho um flex wrap, o flex item vai se adaptar ao tamanho do container e não vai encolher.
+  </p>
+
+  <h2>Flex</h2>
+
+  <p>
+    A propriedade flex é uma shorthand para as propriedades flex-grow, flex-shrink e flex-basis. <br>
+    Ela pode ter um valor numérico que define a capacidade de crescimento, encolhimento e tamanho inicial do flex item. <br>
+    Configurações mais comuns:
+    <ul></ul>
+      <li>flex: 0,1 e auto - ou initial (valor padrão) - o flex item vai crescer e encolher de acordo com o valor definido</li>
+      <li>flex: 0, 0 e auto - ou none (nao cresce nem encolhe)</li>
+      <li>flex: 1, 1 e auto - ou auto (cresce e encolhe)</li>
+    </ul>
+  </p>
+
 </body>
 </html>
