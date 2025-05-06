@@ -16,15 +16,19 @@ body {
 header {
   background-color: #4d4d4d;
   color: #ffffff;
-  padding: 20px;
+ 
 }
 
 h1, h2 {
-  margin: 20px;
+  padding: 20px;
   line-height: 1.2;
   text-align: left;
   
-} 
+}
+
+header p {
+  padding-top: 0px;
+}
 
 p {
   padding: 20px;
@@ -67,6 +71,9 @@ div.text {
 }
 
 div.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1 0 400px;
 }
 
@@ -84,12 +91,6 @@ div.media iframe {
   margin: 0 auto;
   padding: 20px 0px;
 }
-
-
-
-
-
-
 
 footer p {
   background-color: #4d4d4d;
