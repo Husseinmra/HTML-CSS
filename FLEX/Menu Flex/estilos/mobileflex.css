@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    
+  }
+
+  header h1 {
+    flex: 1 1 50px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    flex: 1 1 40px;
+    width: 90vw;
+  }
+
+
+
