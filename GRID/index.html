@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+</head>
+<body>
+  <h1>Tudo sobre Grid Layout</h1>
+
+  <h2>O que é Grid Layout?</h2>
+  <p>Grid Layout é um sistema de layout que permite criar layouts complexos e flexíveis com facilidade.</p>
+
+  <h2>Anatomia do Grid Layout</h2>
+  <p>O Grid Layout é composto por:</p>
+  <ul>
+    <li>Container - Container é o elemento pai que define o layout do Grid.</li>
+    <li>Items - Items são os elementos filhos que compõem o Grid (quadradinhos).</li>
+    <li>Tracks - Tracks são as linhas que compõem o Grid (quadradinhos que formam as colunas e linhas) - Pode ser ROW ou COLUMN tracks.</li>
+    <li>Lines - Linhas são as linhas que compõem o Grid (linhas horizontais e verticais) - Sempre da esquerda para a direita e de cima para baixo.</li>
+  </ul>
+
+  <p> Quando eu falo que um grid é 6X6, eu estou falando que o grid tem 6 colunas e 6 linhas (tracks) e não apenas linhas por si só (grid lines).</p>
+  
+  <p>Elas podem ser numeros negativos ou positivos, e podem ser nomeadas pelo desenvolvedor. <br>
+  Se for negativo é so inverter a ordem <br>
+  É mais lógico usar dessa forma pois ao inves de falar que uma área vai da linha vertical 2 até a 6 eu posso dizer que vai da 2 até a penultima (ou -2). Olhar exemplo abaixo
+
+  <img src="imagens/grid.png" alt="grid-lines" style="width: 100%;">
+
+  Posso usar também usar o Gap para definir o espaçamento entre os tracks.
+ </p>
+
+ <h2>Display: grid</h2>
+ <p>O display: grid é um display que transforma o elemento em um grid. <br>
+  O elemento pai se torna o container e os elementos filhos se tornam os items.
+ </p>
+ <p>
+  No google dev tools eu posso, ao selecionar o elemento pai, clicar no botão "Display: grid" e ver o resultado. Posso também usar o botão de grade para alterar meu grid e ver o resultado.
+ </p>
+
+ <h2>Grid-template-columns</h2>
+ <p>
+  A propriedade grid-template-columns define o número de colunas do grid e o tamanho de cada coluna. 
+ </p>
+  
+ <h2>Grid-template-rows</h2>
+ <p>
+  A propriedade grid-template-rows define o número de linhas do grid e o tamanho de cada linha.
+ </p>
+
+ <h2>Grid-template-areas</h2>
+ <p>
+  A propriedade grid-template-areas define o nome de cada área do grid.
+ </p>
+
+ <h2>
+  itens e content
+ </h2>
+ <p>
+  A propriedade align-items define o alinhamento dos itens no eixo vertical.
+ </p>
+ <p>
+  A propriedade justify-items define o alinhamento dos itens no eixo horizontal.
+ </p>
+ <p>
+  A propriedade align-content define o alinhamento dos itens no eixo vertical.
+ </p>
+ <p>
+  A propriedade justify-content define o alinhamento dos itens no eixo horizontal.
+ </p>
+
+ <h2>
+  grid auto rows e grid auto columns
+ </h2>
+ <p>
+  A propriedade grid-auto-rows define o tamanho de cada linha sempre que for adicionado um novo item na linha de baixo. Eu defino quantos pixels cada linha vai ter.
+ </p>
+ <p>
+  A propriedade grid-auto-columns define o tamanho de cada coluna sempre que for adicionado um novo item na coluna do lado. Eu defino quantos pixels cada coluna vai ter.
+ </p>
+
+ <h2>Shorthand</h2>
+ <p>
+  place-items: alinhamento horizontal e vertical.
+ </p>
+ <p>
+  place-content: alinhamento horizontal e vertical do container.
+ </p>
+
+ <h2>
+  
+ </h2>
+</body>
+</html>
